@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 const terms = { F: 'Fall', W: 'Winter', S: 'Spring'};
 const days = ['M', 'Tu', 'W', 'Th', 'F'];

@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import "rbx/index.css";
 import { Button, Container, Message, Title } from "rbx";
-
+import { timeParts } from './components/Course/times.js';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
@@ -48,17 +48,6 @@ const Banner = ({ user, title }) => (
 
 
 const meetsPat = /^ *((?:M|Tu|W|Th|F)+) +(\d\d?):(\d\d) *[ -] *(\d\d?):(\d\d) *$/;
-
-const timeParts = meets => {
-  const [match, days, hh1, mm1, hh2, mm2] = meetsPat.exec(meets) || [];
-  return !match ? {} : {
-    days,
-    hours: {
-      start: hh1 * 60 + mm1 * 1,
-      end: hh2 * 60 + mm2 * 1
-    }
-  };
-};
 
 const addCourseTimes = course => ({
   ...course,

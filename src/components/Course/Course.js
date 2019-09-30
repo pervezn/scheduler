@@ -1,6 +1,6 @@
 import React from 'react';
 import 'rbx/index.css';
-import {Button, Container, Title, Message} from 'rbx';
+import {Button} from 'rbx';
 import {    timeParts,
     getCourseNumber,
     getCourseTerm,

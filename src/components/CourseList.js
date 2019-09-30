@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import "rbx/index.css";
 import { Button} from "rbx";
-
+import { getCourseTerm } from './Course/times.js';
 import Course from './Course';
 
 const terms = { F: 'Fall', W: 'Winter', S: 'Spring'};
@@ -14,9 +14,9 @@ const useSelection = () => {
     return [ selected, toggle ];
   };
 
-const getCourseTerm = course => (
-    terms[course.id.charAt(0)]
-  );
+// const getCourseTerm = course => (
+//     terms[course.id.charAt(0)]
+// );
   
 const buttonColor = selected => (
     selected ? 'success' : null
